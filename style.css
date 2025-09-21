@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Inter',sans-serif;
 }
 
 body {
@@ -16,30 +18,116 @@ body {
   background: #fff;
   padding: 10px 20px;
   border-bottom: 1px solid #e0e0e0;
-}
-
-.team {
-  display: flex;
   align-items: center;
-  gap: 15px;
+  
+}
+.team {
+  position: relative;
+  display: inline-block;
+}
+.menu-button{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.team span:nth-of-type(2) {
+  background-color: rgb(233, 233, 239);
+  height: 18px;
+  width: 32px;
+  padding: 2px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  margin-top: 6px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  padding: 6px 0;
+  width: 220px;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2ecc71;
+.dropdown a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
-.team-info {
-  font-size: 14px;
-  color: #333;
+.team:hover .dropdown{
+  display: block;
 }
+.right{
+  display: flex;
+  justify-content: space-between;
+  width: 16rem;
+  align-items: center;
 
-.plan {
-  margin-left: 5px;
-  background: #f1f1f1;
-  padding: 2px 6px;
+}
+#search{
+  border: none;
+  display: inline-flex;
+  justify-content: space-around;
+  width: 60px;
+  height: 30px;
+  align-items: center;
+  border-radius: 10px;
+
+}
+#search span{
+  background-color: white;
+  height: 18px;
+  width: 28px;
+  align-items: center;
+  padding: 3px;
+  font-weight: 700;
+  letter-spacing:3px ;
+  font-size: 0.58rem;
   border-radius: 5px;
-  font-size: 12px;
-  color: #666;
+}
+#lang{
+  border:none;
+  height: 18px;
+  width: 25px;
+  border-radius: 4px;
+  background-image: url('united-kingdom.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#notification,#contacts,#profile{
+  border: none;
+  background-color: white;
+}
+#settings{
+  border:none;
+  height: 25px;
+  width: 20px;
+  border-radius: 4px;
+  background-image: url('cogwheel.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  animation: wheel 5s linear infinite ;
+}
+@keyframes wheel {
+  from{transform:rotate(0deg) ;}
+  to {
+    transform: rotate(360deg);
+  }
 }
