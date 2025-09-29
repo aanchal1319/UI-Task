@@ -170,7 +170,9 @@ body {
   display: flex;
 }
 
-
+.dashboard{
+  padding-left: 80px;
+}
 .sidebar {
   width: 80px;
   background-color: #fff;
@@ -254,7 +256,7 @@ body {
 }
 .main{
   display: flex;
-  width: calc(100% - 80px );
+  width: 100%;
   padding-left: 40px;
   padding-right: 40px;
   margin-left: auto;
@@ -264,8 +266,11 @@ body {
   margin-right: auto;
   align-content: center;
   left: 80px;
-  position: relative;
+  flex: 1 1 auto;
+  box-sizing: border-box;
 }
+
+
 .nav{
   display: flex;
   flex-direction: column;
@@ -354,6 +359,8 @@ body {
 .activity{
   display: flex;
   gap: 35px;
+  
+  
 }
 .info{
   width:calc(100% / 3) ;
@@ -702,4 +709,18 @@ body {
   .main {
       max-width: 1200px;
   }
+}
+@media(max-width: 945px){
+  .activity{
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 0px;
+  
+  }
+  .info , .posts{
+    width: 100%;
+    font-size: 0.9rem;
+    
+  }
+  
 }
